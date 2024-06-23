@@ -1,0 +1,13 @@
+### Note: DO NOT use quantized model or quantization_bit when merging lora adapters
+
+### model
+model_name_or_path: /storage/nvme/chatglm_finetune/chatglm3-6b
+adapter_name_or_path: /storage/nvme/chatglm_finetune/saves/chatglm3-6b/lora/sft
+template: chatglm3
+finetuning_type: lora
+
+### export
+export_dir: /storage/nvme/chatglm_finetune/models/chatglm3-6b_lora_sft
+export_size: 2
+export_device: cpu
+export_legacy_format: false

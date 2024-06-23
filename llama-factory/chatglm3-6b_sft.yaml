@@ -1,0 +1,2 @@
+model_name_or_path: /storage/nvme/chatglm_finetune/models/chatglm3-6b_lora_sft
+template: chatglm3
