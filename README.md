@@ -12,7 +12,7 @@
 python nf4\&fp4_chat.py
 ```
 
-使用前需要讲代码中的模型路径替换为微调后的模型路径，并且更改推理所用的 gpu。
+使用前需要代码中的模型路径替换为微调后的模型路径，并且更改推理所用的 gpu。
 
 ## 测试
 
@@ -33,3 +33,9 @@ python nf4&fp4.mmlu.py
 ```python
 python nf4&fp4_ppl.py
 ```
+
+Rouge指标测试，可在代码中指定模型路径和具体量化、剪枝方式。
+```python
+python rouge_test.py
+```
+
