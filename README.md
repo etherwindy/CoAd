@@ -4,6 +4,13 @@
 
 利用 [Adgen](https://hf-mirror.com/datasets/HasturOfficial/adgen) 数据集，使用 [LLaMA-Factory](https://github.com/hiyouga/LLaMA-Factory) 中的 QLoRA 对 [chatglm3-6b](https://hf-mirror.com/THUDM/chatglm3-6b)模型进行微调。微调模型所使用的配置文件在`llama-factory`文件夹中。
 
+- `chatglm3-6b_lora_sft_bitsandbytes.yaml` QLoRA 微调模型
+- `chatglm3-6b_lora_sft` 合并原模型和 adapter
+- `chatglm3-6b_lora_original_predict.yaml` 测试原模型
+- `chatglm3-6b_lora_predict.yaml` 测试微调后的模型
+- `chatglm3-6b.yaml` 原模型推理
+- `chatglm3-6b_sft.yaml` 微调后的模型推理
+
 ## 推理
 
 使用自定义量化方法量化微调后的模型并进行推理“
@@ -13,11 +20,13 @@ python nf4\&fp4_chat.py
 ```
 
 使用L1剪枝方法剪枝微调后的模型：
+
 ```python
 python pruning_L1.py
 ```
 
 使用敏感度剪枝方法剪枝：
+
 ```python
 python pruning_sensitive.py
 ```
@@ -51,6 +60,7 @@ python ft+nf4+prune.py
 ```
 
 Rouge指标测试，可在代码中指定模型路径和具体量化、剪枝方式。
+
 ```python
 python rouge_test.py
 ```
