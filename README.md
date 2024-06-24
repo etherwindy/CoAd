@@ -11,9 +11,9 @@
 - `chatglm3-6b.yaml` 原模型推理
 - `chatglm3-6b_sft.yaml` 微调后的模型推理
 
-## 推理
+## 量化 & 剪枝
 
-使用自定义量化方法量化微调后的模型并进行推理“
+使用自定义量化方法量化微调后的模型并进行推理。
 
 ```python
 python nf4\&fp4_chat.py
